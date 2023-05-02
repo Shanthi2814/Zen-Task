@@ -1,0 +1,220 @@
+Do follow the program in anonymous and IIFE : 
+
+a) IIFE - Print odd number in an array:
+
+(function(array){
+    for(let i=0;i<array.length;i++){
+    if(array[i]%2!==0){
+    console.log(array[i])
+    }
+    }
+})([4,5,9,3,2,8])
+
+Anonymous:
+
+let array =[4,5,9,3,2,8]
+function(array){
+    for(let i=0;i<array.length;i++){
+    if(array[i]%2!==0){
+    console.log(array[i])
+    }
+    }
+}
+ 
+
+b)convert all the string in title caps in a string array
+
+Anonymous:
+
+let str=[GUVI];
+function title(str){
+                str = str.toLowerCase().split(" ");
+                   for (let i = 0; i < str.length; i++) {
+                      str[i] = str[i].charAt(0).toUpperCase() + str[i].slice(1); 
+                    } 
+                    // console.log(str.join(" "));
+                    return str.join(" ");
+                  }
+
+
+
+
+IIFE:
+
+(function title(str){
+                str = str.toLowerCase().split(" ");
+                   for (let i = 0; i < str.length; i++) {
+                      str[i] = str[i].charAt(0).toUpperCase() + str[i].slice(1); 
+                    } 
+                    // console.log(str.join(" "));
+                    return str.join(" ");
+                  });console.log(title("GUVI"));
+
+
+
+c) sum of all number in array
+
+Anonymous:
+
+let array =[3,2,5,6];
+
+ function(array){
+    let sum = 0;
+    for(let i=0;i<array.length;i++){
+        sum = sum + array[i]
+    {
+    console.log(sum)
+    }
+    }
+}
+
+
+
+IIFE : 
+(function(array){
+    let sum = 0;
+    for(let i=0;i<array.length;i++){
+        sum = sum + array[i]
+    {
+    console.log(sum)
+    }
+    }
+})([3,2,5,6]);
+
+d.Return all the prime number in an array:
+
+Anonymous:
+
+let array = [-3,-2,-1,...Array(20).keys()];
+function isPrime(num){
+    for(let i =2;num>i;i++){
+        if(num%i==0){
+            return false;
+            
+        }
+    }
+    return num>1
+}console.log(array.filter(isPrime));
+IIFE:
+(function isPrime(num){
+    num = num.filter((number)=>{
+    for(let i =2;i,Math.sqrt(number);i++){
+        if(num%i===0){
+            return false;
+            
+        }
+    }
+    return true
+});
+console.log(num);
+})([1,2,3,4,5,6,7,8,9])
+
+E)Return all palindrome in an array:
+
+Anonymous:
+
+let isPalinArray = [1,2,3];
+   function isPalinArray(arr , n)
+    {
+                for (let i = 0; i < n; i++) {
+            let ans = isPalindrome(arr[i]);
+            if (ans == false)
+                return false;
+        }
+        return true;
+    }console.log(isPalinArray);
+
+
+IIFE:
+
+   (function isPalinArray(arr , n)
+    {
+                for (let i = 0; i < n; i++) {
+            let ans = isPalindrome(arr[i]);
+            if (ans == false)
+                return false;
+        }
+        return true;
+    });([1,2,3]);
+g.Remove duplicate on array
+IIFE
+(function(array){
+                        let dup = [...new Set(array)];
+                        console.log(dup);
+                       })([1,1,2,3,4])
+                       
+Anonymous:
+let arr = [1,1,2,3];
+                      function(array){
+                        let dup = [...new Set(array)];
+                        console.log(dup);
+                      }
+
+h)Rotate an array K times
+IIFE:
+(function(array , k){
+                          k = k % a.length;
+                            if(k < 0){
+                              k += a.length;
+                            }
+
+                            reverse(a, 0, a.length - k - 1);
+                            reverse(a, a.length - k, a.length - 1);
+                            reverse(a, 0, a.length - 1);
+                          })([1,2,3,4] )
+Anonymous
+let arr=[1,2,3,4];
+function(array , k){
+                          k = k % a.length;
+                            if(k < 0){
+                              k += a.length;
+                            }
+
+                            reverse(a, 0, a.length - k - 1);
+                            reverse(a, a.length - k, a.length - 1);
+                            reverse(a, 0, a.length - 1);
+                          })
+
+
+3.Program in arrow function:
+
+a)print odd number in array
+
+let number =[1,2,3,4,5,6,7,8,9]
+                 let odd =number.filter(n=>n%2)
+                                           console.log(odd);
+
+b)convert all the string in title caps in a string array
+
+function titleCase(st) {
+      return st.toLowerCase().split(" ").reduce( (s, c) =>
+      s +""+(c.charAt(0).toUpperCase() + c.slice(1) +" "), '');
+    }
+    console.log(titleCase("Guvi Geek"));
+
+c)Sum of Array
+
+sum = (a, b) => {
+  return(a+b)
+}
+  x= sum(34,87)
+  console.log(x)
+
+d)Return prime number in array
+
+let newArray = [1, 3, 2, 5, 10];
+let myPrimeArray = newArray.filter(num => {
+  for (let i = 2; i < num; i++) {
+    if (num % i === 0) return false;
+  }
+  return num !== 1;
+});
+console.log(myPrimeArray);
+
+
+
+
+
+
+
+
