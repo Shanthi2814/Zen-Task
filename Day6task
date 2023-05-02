@@ -1,0 +1,19 @@
+Write a "person" class to hold all the details.
+class Person {
+    constructor (){
+        this.firstname= "Shanthi";
+        this.lastname="Sivasubramanian";
+        this.age=26;
+        this.mobilenumber=9734456868;
+        this.address="1/3 north street";
+        this.city="Trichy";
+        this.state="Tamilnadu";
+        this.qualification="B.E (computer science and engineering)";
+        this.experience="Finance sector last 4 years";
+        this.worklocation="cbe";
+        
+    }
+}
+
+let Person1 = new Person();
+console.log(Person1);
