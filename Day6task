@@ -1,4 +1,5 @@
-Write a "person" class to hold all the details.
+1)Write a "person" class to hold all the details.
+
 class Person {
     constructor (){
         this.firstname= "Shanthi";
@@ -17,3 +18,18 @@ class Person {
 
 let Person1 = new Person();
 console.log(Person1);
+
+2)write a class to calculate the uber price.
+
+class uberPriceCalculate{
+    constructor(x,y,z){
+        this.defaultPrice = x
+        this.above4PerHeadAdd = y
+        this.extraKM = z
+    }
+    add(){
+       return this.defaultPrice + this.above4PerHeadAdd + this.extraKM
+    }
+}
+let Person1 = new uberPriceCalculate(49,10,15);
+console.log(`${Person1.defaultPrice} + ${Person1.above4PerHeadAdd} + ${Person1.extraKM} =${Person1.add()}`)
