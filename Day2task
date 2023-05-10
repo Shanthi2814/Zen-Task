@@ -1,93 +1,26 @@
-Compare the JSON have the same properties and without order:
+Difference between document and window object : 
+ 
+Document:
 
-let obj1 = { name:"person1",age:"5"}
-let obj2 = { age:"5",name:"person1"}
-let flag = true
-for(let e in obj1)
+It represents any HTML document or web page that is loaded in the browser.
+It is loaded inside the window.
+It is the object of window property.
+All the tags, elements with attributes in HTML are part of the document.
+We can access the document from a window using the window. Document
+The document is part of BOM (browser object model) and dom      (Document object model)
+Properties of document objects such as title, body, cookies, etc can also be accessed by a window like this window. document.title
+Syntax: document.propertyname;
+Example: document.title :  will return the title of the document
 
-{
-    if(obj1[e]!==obj2[e])
-    {
-        flag = false;
-        break
-    }
-}
-flag?console.log("Equal"):console.log("Not equal")
+Window object:
 
-let keys = Object.keys(obj1)
-console.log(keys)
-let flag = true
-for(e of keys)
-{
-    if(obj1[e]!==obj2[e])
-    {
-        flag = false;
-        break
-    }
-    
-}
-flag?console.log("Equal"):console.log("Not equal")
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-Display all country Flag:
+It represents a browser window or frame that displays the contents of the webpage.   
+It is the very first object that is loaded in the browser.
+It is the object of the browser.
+Global objects, functions, and variables of JavaScript are members of the window object.
+We can access the window from the window only. i.e. window.window
+The window is part of BOM, not DOM.
+Properties of the window object cannot be accessed by the document object.
+Syntax: window.propertyname;
+Example: window.innerHeight : will return the height of the content area of the browser
 
-<!DOCTYPE html>
-<html >
-<head>
-    
-    <title>Guvi Task Activity</title>
-</head>
-<body>
-   <h1> Activity </h1>
-   <h2>XMLHTT Request</h2>
-   <script>
-            console.log("Welcome to HTML JS")
-
-            function handleData(){
-            let data = JSON.parse(this.responseText)
-        console.log(data)
-    for(let i=0;i<data.length;i++)
-    {
-        console.log(data[i].flag)
-            }
-}         const req = new XMLHttpRequest();
-            req.addEventListener('load',handleData)
-            req.open("GET","https://restcountries.com/v3.1/all")
-            req.send()
-        </script>
-</body>
-</html>
-
-
-
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-All the country name,region,subregion and population:
-
-<!DOCTYPE html>
-<html >
-<head>
-    
-    <title>Guvi Task Activity</title>
-</head>
-<body>
-   <h1> Activity </h1>
-   <h2>XMLHTT Request</h2>
-   <script>
-            console.log("Welcome to HTML JS")
-
-            function handleData(){
-            let data = JSON.parse(this.responseText)
-        console.log(data)
-    for(let i=0;i<data.length;i++)
-    {
-        console.log(data[i].name.common)
-        console.log(data[i].region)
-        console.log(data[i].subregion)
-        console.log(data[i].population)
-    }
-}         const req = new XMLHttpRequest();
-            req.addEventListener('load',handleData)
-            req.open("GET","https://restcountries.com/v3.1/all")
-            req.send()
-        </script>
-</body>
-</html>
